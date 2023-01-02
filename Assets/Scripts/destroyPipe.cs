@@ -13,9 +13,10 @@ public class destroyPipe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x <= -20)
+        if (transform.position.x <= -25)
+        {
             Destroy(gameObject);
-            Debug.Log("Bussy destroyed a pipe!");
-
+            Debug.Log("Pipe Destroyed!");
+        }
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +6,7 @@ public class PipeSpawner : MonoBehaviour
 {
     public GameObject pipe;
     public float spawnRate = 2;
-    public float heightOffset = 2;
+    public float heightOffset = 6;
     private float timer = 0;
 
     // Start is called before the first frame update

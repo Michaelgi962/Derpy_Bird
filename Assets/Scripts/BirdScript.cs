@@ -8,7 +8,7 @@ public class BirdScript : MonoBehaviour
     public float flapStrength;
     public LogicScript logic;
     public bool birdIsAlive = true;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +24,21 @@ public class BirdScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "death")
+        {
+            logic.gameOver();
+            birdIsAlive = false;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        logic.gameOver();
-        birdIsAlive = false;
+        if(collision.gameObject.tag=="death")
+        {
+            logic.gameOver();
+            birdIsAlive = false;
+        }
     }
 }
