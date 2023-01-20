@@ -8,7 +8,8 @@ public class BirdScript : MonoBehaviour
     public float flapStrength;
     public LogicScript logic;
     public bool birdIsAlive = true;
-    public AudioSource deathSound;
+    // public AudioSource deathSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class BirdScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "death")
         {
-            deathSound.Play();
+            // deathSound.play();
             logic.gameOver();
             birdIsAlive = false;
         }
@@ -38,7 +39,7 @@ public class BirdScript : MonoBehaviour
     {
         if(collision.gameObject.tag=="death")
         {
-            deathSound.Play();
+            // deathSound.play();
             logic.gameOver();
             birdIsAlive = false;
         }
